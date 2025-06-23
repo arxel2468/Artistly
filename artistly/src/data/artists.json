@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "John Smith",
+      "category": "Singer",
+      "priceRange": "$1000-$2000",
+      "location": "Mumbai",
+      "image": "/placeholder.jpg",
+      "bio": "Professional vocalist with 10 years of experience in live performances and studio recordings."
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "category": "Dancer",
+      "priceRange": "$800-$1500",
+      "location": "Delhi",
+      "image": "/placeholder.jpg",
+      "bio": "Kathak dancer specializing in fusion performances and cultural events."
+    },
+    {
+      "id": 3,
+      "name": "Raj Kapoor",
+      "category": "DJ",
+      "priceRange": "$500-$1000",
+      "location": "Bangalore",
+      "image": "/placeholder.jpg",
+      "bio": "Energetic DJ with expertise in wedding events and corporate parties."
+    },
+    {
+      "id": 4,
+      "name": "Ananya Desai",
+      "category": "Speaker",
+      "priceRange": "$2000-$5000",
+      "location": "Chennai",
+      "image": "/placeholder.jpg",
+      "bio": "Motivational speaker with a focus on personal development and leadership."
+    },
+    {
+      "id": 5,
+      "name": "Vikram Singh",
+      "category": "Musician",
+      "priceRange": "$1000-$2000",
+      "location": "Kolkata",
+      "image": "/placeholder.jpg",
+      "bio": "Versatile guitarist who performs across multiple genres including rock and classical."
+    },
+    {
+      "id": 6,
+      "name": "Meera Patel",
+      "category": "Singer",
+      "priceRange": "$1500-$3000",
+      "location": "Mumbai",
+      "image": "/placeholder.jpg",
+      "bio": "Bollywood playback singer with experience in live concerts and recordings."
+    },
+    {
+      "id": 7,
+      "name": "Arjun Kumar",
+      "category": "Dancer",
+      "priceRange": "$800-$1500",
+      "location": "Delhi",
+      "image": "/placeholder.jpg",
+      "bio": "Contemporary dancer who has performed in national and international competitions."
+    },
+    {
+      "id": 8,
+      "name": "Sanya Malhotra",
+      "category": "DJ",
+      "priceRange": "$1000-$2000",
+      "location": "Pune",
+      "image": "/placeholder.jpg",
+      "bio": "Club DJ specializing in electronic dance music and remix productions."
+    }
+  ]
+  
