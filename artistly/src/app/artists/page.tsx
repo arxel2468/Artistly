@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import ArtistCard from '@/components/artists/artist-card';
 import FilterBar from '@/components/artists/filter-bar';
 import artistsData from '@/data/artists.json';
 
-export default function ArtistsPage() {
+// Create a client component that uses useSearchParams
+function ArtistListingContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || '';
   
@@ -95,5 +96,29 @@ export default function ArtistsPage() {
         </div>
       )}
     </div>
+  );
+}
+
+// Create a loading fallback
+function ArtistListingLoading() {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8">Find Artists</h1>
+      <div className="bg-gray-100 p-4 rounded-lg mb-8 animate-pulse h-24"></div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+          <div key={i} className="bg-gray-100 rounded-lg h-64 animate-pulse"></div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Main page component with Suspense
+export default function ArtistsPage() {
+  return (
+    <Suspense fallback={<ArtistListingLoading />}>
+      <ArtistListingContent />
+    </Suspense>
   );
 }
