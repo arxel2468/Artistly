@@ -25,14 +25,14 @@ export default function FilterBar({
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
           <Select 
-            value={selectedFilters.category} 
-            onValueChange={(value) => onFilterChange('category', value)}
+            value={selectedFilters.category || "all"} 
+            onValueChange={(value) => onFilterChange('category', value === "all" ? "" : value)}
           >
             <SelectTrigger>
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Categories</SelectItem>
+              <SelectItem value="all">All Categories</SelectItem>
               {categories.map(category => (
                 <SelectItem key={category} value={category}>{category}</SelectItem>
               ))}
@@ -43,14 +43,14 @@ export default function FilterBar({
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
           <Select 
-            value={selectedFilters.location} 
-            onValueChange={(value) => onFilterChange('location', value)}
+            value={selectedFilters.location || "all"} 
+            onValueChange={(value) => onFilterChange('location', value === "all" ? "" : value)}
           >
             <SelectTrigger>
               <SelectValue placeholder="All Locations" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Locations</SelectItem>
+              <SelectItem value="all">All Locations</SelectItem>
               {locations.map(location => (
                 <SelectItem key={location} value={location}>{location}</SelectItem>
               ))}
@@ -61,14 +61,14 @@ export default function FilterBar({
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Price Range</label>
           <Select 
-            value={selectedFilters.priceRange} 
-            onValueChange={(value) => onFilterChange('priceRange', value)}
+            value={selectedFilters.priceRange || "all"} 
+            onValueChange={(value) => onFilterChange('priceRange', value === "all" ? "" : value)}
           >
             <SelectTrigger>
               <SelectValue placeholder="All Price Ranges" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Price Ranges</SelectItem>
+              <SelectItem value="all">All Price Ranges</SelectItem>
               {priceRanges.map(range => (
                 <SelectItem key={range} value={range}>{range}</SelectItem>
               ))}
